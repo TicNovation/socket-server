@@ -33,10 +33,12 @@ export default class Server{
            socket.conectarCliente(cliente);
             //Escuchar usuario
             socket.usuario(cliente, this.io);
+            //Obtener usuarios activos
+            socket.ObtenerUsuarios(cliente, this.io);
             //Mensajes
             socket.mensaje(cliente, this.io);
             //Desconectar
-            socket.desconectar(cliente);
+            socket.desconectar(cliente, this.io);
          
         });
     }

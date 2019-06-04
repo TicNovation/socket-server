@@ -20,13 +20,13 @@ export class UsuariosLista{
                 break;
             }
         }
-
-        console.log('=== Actualizando usuario ===');
-        console.log(this.lista);
     }
 
     public getLista(){
-        return this.lista;
+        console.log("Lista");
+        console.log(this.lista);
+        return this.lista.filter(usuario => usuario.nombre != 'sin-nombre');
+        
     }
 
     public getUsuario(id:string){
